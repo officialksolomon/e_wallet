@@ -1,0 +1,13 @@
+.nav-link,
+.dropdown-toggle {
+    color: #0275d8;
+}
+
+#login {
+    padding-left: 2em;
+    padding-right: 2em;
+}
+#register {
+    padding-left: 1.3em;
+    padding-right: 1.3em;
+}

@@ -1,0 +1,85 @@
+{% load static %}
+
+<nav class="navbar navbar-expand-md navbar-light bg-white px-5">
+    <a class="navbar-brand fw-bolder text-primary"
+        href="#">E-WALLET</a>
+    <button class="navbar-toggler d-lg-none"
+        type="button"
+        data-toggle="collapse"
+        data-target="#collapsibleNavId"
+        aria-controls="collapsibleNavId"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center"
+        id="collapsibleNavId">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+                <a class="nav-link"
+                    href="#">Home <span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link"
+                    href="#">Features</a>
+            </li>
+
+            <!-- dropdown -->
+
+            <li class="nav-item dropdown">
+                <a class="btn dropdown-toggle"
+                    href="#"
+                    role="button"
+                    id="dropdownMenuLink"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Services
+                </a>
+
+                <ul class="dropdown-menu"
+                    aria-labelledby="dropdownMenuLink">
+                    <li><a class="dropdown-item"
+                            href="#">Deposit</a></li>
+                    <li><a class="dropdown-item"
+                            href="#">Withdrawal</a></li>
+                    <li><a class="dropdown-item"
+                            href="#">Transfer</a></li>
+                </ul>
+            </li>
+            <!-- /dropdown -->
+
+            <li class="nav-item">
+                <a class="nav-link"
+                    href="#">Pricing</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link"
+                    href="#">FAQs</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link"
+                    href="#">About</a>
+            </li>
+        </ul>
+        <div>
+            {% if request.user.is_authenticated %}
+            <a href="#">logout</a>
+
+
+            {% else %}
+            <a name=""
+                id="login"
+                class="btn btn-primary bg-gradient rounded-5 mx-2 "
+                href="#"
+                role="button">Login</a>
+            <a name=""
+                id="register"
+                class="btn btn-outline-primary rounded-5 mx-2"
+                href="#"
+                role="button">Register</a>
+            {% endif %}
+
+
+        </div>
+    </div>
+</nav>
