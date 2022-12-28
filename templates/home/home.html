@@ -1,0 +1,106 @@
+{% extends '_base.html' %}
+{% load static %}
+
+{% block extra_stylesheets %}
+<link rel="stylesheet"
+    href="{% static 'css/home/home.css' %}">
+{% endblock extra_stylesheets %}
+
+{% block title %}Home page{% endblock title %}
+
+
+{% block content %}
+
+
+<section class="container-fluid w-100 h-100  p-5 pt-0">
+    <div class="row ">
+        <!-- right content -->
+        <div class=" col-12 col-md-7 brand-message">
+            <div
+                class=" d-flex flex-column justify-content-center align-items-center">
+                <h1 class="h1-main fw-bolder">Swift & <br> Reliable <span
+                        class="text-primary">payment
+                        solution</span>
+                    at your <br> fingertips.</h1>
+                <hr class="w-75 align-self-start">
+                <p class="align-self-start">
+                    Online Wallet payment solution with 5K+ successfully <br>
+                    processed financial transactions. Made simple to help
+                    you achieve <br> your goals faster.
+                </p>
+                <div class="align-self-start">
+                    <a name="get-started"
+                        id=""
+                        class="btn btn-warning bg-gradient "
+                        href="#"
+                        role="button"> <i class="fa fa-arrow-circle-o-right"
+                            aria-hidden="true"></i> Get Started</a>
+                </div>
+            </div>
+
+        </div>
+        <!-- right content END -->
+
+        <!-- left content -->
+        <div class="col-12 col-md-5 ">
+
+            <div class=" d-flex justify-content-start align-items-center ">
+                <img class="right-img"
+                    src="{% static "images/blob.png" %}"
+                    alt="happy">
+            </div>
+
+
+        </div>
+        <!-- left content END -->
+    </div>
+</section>
+
+<section class="container-fluid p-5">
+
+    <div class="row g-4 justify-content-start counts">
+        <div class="col-12 col-lg-3 p-md-0">
+            <div
+                class=" bg-warning bg-gradient rounded-2  d-flex justify-content-start align-items-center  bg-opacity-25">
+                <i class="fa fa-sticky-note fa-5x m-3"
+                    aria-hidden="true"></i>
+                <p class="lh-sm"> <span class="fw-bolder fs-5">7k</span> <br>
+                    processed <br>
+                    transactions.</p>
+            </div>
+        </div>
+        <div class="col-12 col-lg-3 ">
+            <div
+                class=" bg-primary bg-gradient rounded-2 d-flex justify-content-start align-items-center  bg-opacity-25">
+                <i class="fa fa-check-square fa-5x m-3"
+                    aria-hidden="true"></i>
+                <p class="lh-sm"> <span class="fw-bolder fs-5">6k</span> <br>
+                    successful <br>
+                    transactions.</p>
+            </div>
+        </div>
+        <div class="col-12 col-lg-3 ">
+            <div
+                class=" bg-success bg-gradient rounded-2 d-flex justify-content-start align-items-center  bg-opacity-25">
+                <i class="fa fa-user fa-5x m-3"
+                    aria-hidden="true"></i>
+                <p class="lh-sm"> <span class="fw-bolder fs-5">60k</span> <br>
+                    registered <br>
+                    users.</p>
+            </div>
+        </div>
+        <div class="col-12 col-lg-3 ">
+            <div
+                class=" bg-danger bg-gradient rounded-2 d-flex justify-content-start align-items-center  bg-opacity-25">
+                <i class="fa fa-users fa-5x m-3"
+                    aria-hidden="true"></i>
+                <p class="lh-sm"> <span class="fw-bolder fs-5">53k</span> <br>
+                    active<br>
+                    users.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+{% endblock content %}

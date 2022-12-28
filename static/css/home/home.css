@@ -1,0 +1,17 @@
+.right-img {
+    width: 85%;
+}
+
+@media screen and (min-width: 900px) {
+    .brand-message {
+        padding-left: 6rem;
+    }
+    .counts {
+        padding-left: 6rem;
+        padding-right: 6rem;
+    }
+
+    .h1-main {
+        font-size: 4em;
+    }
+}
