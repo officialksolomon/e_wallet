@@ -1,0 +1,98 @@
+{% extends '_base.html' %}
+{% load static %}
+{% block extra_stylesheets %}
+<link rel="stylesheet"
+    href="{% static 'css/home/home.css' %}">
+<style>
+    .header-avatar {
+        left: 0;
+        right: 0;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .mb-10 {
+        margin-bottom: 6rem !important;
+    }
+
+    .header-banner {
+        height: 150px;
+        background-image: url('/static/images/header-banner.png');
+        background-repeat: no-repeat;
+        background-size: auto;
+
+    }
+
+    @media screen and (max-width:800px) {
+        .header-avatar {
+            width: 100px;
+            height: 100px;
+        }
+
+
+    }
+
+</style>
+{% endblock extra_stylesheets %}
+
+{% block title %}Wallet{% endblock title %}
+
+
+{% block content %}
+<!-- top -->
+<div class="container-fluid m-0 mb-5">
+    <div class="row g-4">
+        <div class="col-12 p-0">
+            <div
+                class="header-banner pt-3 bg-primary  position-relative text-white">
+                <img class="header-avatar position-absolute top-50  rounded-circle img-thumbnail shadow"
+                    src="{% static "images/avatar.jpg" %}"
+                    width="150"
+                    height="150"
+                    alt="">
+                <p class="text-center m-0 ">Welcome</p>
+                <h3 class="text-center  fw-bolder">Leonard Miller</h3>
+
+                <!-- <img class="img-fluid"
+                    src="{% static "images/header-banner.png" %}"
+                    height="50"
+                    alt=""> -->
+
+
+            </div>
+
+        </div>
+
+        <div class="col-12 p-0">
+            <div
+                class="px-5 pt-5 pt-sm-0 d-flex justify-content-center justify-content-md-end  align-items-center ">
+                <!-- <a name=""
+                    id=""
+                    class="btn btn-outline-primary"
+                    href="#"
+                    role="button"><i class="fa fa-history"
+                        aria-hidden="true"></i> View Transactions</a> -->
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- top END -->
+
+<!-- contents -->
+<div class="container-fluid px-5 h-100 ">
+    <div class="row  h-100">
+        <div class="col-12  col-md-3">
+            {% include "partials/_sidebar.html" %}
+        </div>
+        <div class="col-12 col-md-9 h-100 py-5 bg-light">
+            {% block contents %}
+            Change me! in { block contents }...{ endblock contents }
+            {% endblock contents %}
+        </div>
+
+    </div>
+</div>
+{% block footer %}{% endblock footer %}
+{% endblock content %}

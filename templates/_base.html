@@ -25,7 +25,16 @@
         rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
         crossorigin="anonymous">
+    <!-- Fonts -->
 
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+        rel="stylesheet">
+    <!-- Fonts END -->
 
 
     <link rel="stylesheet"
@@ -41,17 +50,23 @@
     {% block extra_stylesheets %}{% endblock extra_stylesheets %}
 </head>
 
-<body class="p-0">
-    <header class="p-3 mb-3 bg-white ">
+<body class="p-0 vh-100">
+    {% block header %}
+    <header class="p-2 mb-2 bg-white ">
+        {% block navigation %}
         {% include "partials/_nav.html" %}
+        {% endblock navigation %}
     </header>
+    {% endblock header %}
 
-    <main class="container-fluid h-100 p-0">
+    <main class="container-fluid h-100 p-0 ">
         {% block content %}
         <p>Default content...</p>
         {% endblock content %}
 
+        {% block footer %}
         {% include "partials/_footer.html" %}
+        {% endblock footer %}
 
     </main>
     {% block scripts %}
@@ -65,6 +80,7 @@
 
     <!-- Project JS -->
     <script src="{% static 'js/base.js' %}"></script>
+    <script src="{% static 'js/sidebars.js' %}"></script>
 
     {% endblock scripts %}
 

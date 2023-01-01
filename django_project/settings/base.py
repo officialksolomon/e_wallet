@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     # Local
     "accounts",
     "home",
+    "wallet",
 ]
 
 SECRET_KEY = config("SECRET_KEY", default="django-insecure$simple.settings.local")
