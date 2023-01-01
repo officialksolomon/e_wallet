@@ -4,6 +4,7 @@ html {
     position: relative;
     min-height: 100%;
     font-size: 14px;
+    font-family: "Poppins", sans-serif;
 }
 @media (min-width: 768px) {
     html {
@@ -13,6 +14,8 @@ html {
 
 body {
     margin-bottom: 60px; /* Margin bottom by footer height */
+    height: 100vh;
+    font-family: "Poppins", sans-serif;
     /* background: rgb(9, 178, 238);
     background-image: url("/static/images/bg.png"),
         linear-gradient(

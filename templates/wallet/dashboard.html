@@ -1,0 +1,166 @@
+{% extends "_dashboard-base.html" %}
+
+{% block contents %}
+
+<section class="container mb-4">
+    <div class="row g-4">
+        <!-- columns  -->
+        <div class="col-12 col-sm-6 col-md-3 col-lg-4">
+            <div class="px-5 py-3 bg-primary bg-gradient rounded-3 text-white">
+                <p class="text-white mb-0">Current Balance</p>
+                <h1 class="fw-bolder">
+                    {% autoescape off %}
+                    {{ wallet.balance_and_symbol}}
+                    {% endautoescape %}
+                </h1>
+            </div>
+        </div>
+        <!-- columns END -->
+
+        <!-- columns  -->
+        <div class="col-12 col-sm-6 col-md-3 col-lg-4">
+            <div
+                class="px-5 py-3 bg-warning  bg-opacity-25 rounded-3 text-black">
+                <p class="mb-0">Last Transaction</p>
+                <h1 class="fw-bolder">
+                    <span>
+                        {% autoescape off %}
+                        {{ wallet.currency.symbol}}
+                        {% endautoescape %}
+                    </span>
+                    100.00
+                </h1>
+            </div>
+        </div>
+        <!-- columns END -->
+
+        <!-- columns  -->
+        <div class="col-12 col-sm-6 col-md-3 col-lg-4">
+            <div
+                class="px-5 py-3 bg-danger   bg-opacity-25 rounded-3 text-black">
+                <p class="mb-0">Last Withdrawal</p>
+                <h1 class="fw-bolder">
+                    <span>
+                        {% autoescape off %}
+                        {{ wallet.currency.symbol }}
+                        {% endautoescape %}
+                    </span>
+                    100.00
+                </h1>
+            </div>
+        </div>
+        <!-- columns END -->
+
+    </div>
+</section>
+
+<!-- Actions -->
+<section class="container bg-primary bg-opacity-10 ">
+    <div class="row">
+
+        <div class="col-12 col-md-4 p-3">
+            <div class=" d-flex justify-content-center align-items-center">
+                <a name=""
+                    id=""
+                    class="btn btn-primary rounded-5 px-5"
+                    href="#"
+                    role="button"> <i class="fa fa-upload"
+                        aria-hidden="true"></i> Deposit</a>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-4 p-3">
+            <div class=" d-flex justify-content-center align-items-center">
+                <a name=""
+                    id=""
+                    class="btn btn-primary rounded-5 px-5"
+                    href="#"
+                    role="button"> <i class="fa fa-money"
+                        aria-hidden="true"></i> Withdraw</a>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-4 p-3">
+            <div class=" d-flex justify-content-center align-items-center">
+                <a name=""
+                    id=""
+                    class="btn btn-primary rounded-5 px-5"
+                    href="#"
+                    role="button"> <i class="fa fa-history"
+                        aria-hidden="true"></i> Transfer</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Action END -->
+
+
+<!-- Transaction -->
+<section id="transactions"
+    class="container border mt-5 overflow-scroll">
+    <div class="row">
+        <div class="col-12 p-0">
+            <h2 class="border-bottom p-3 fw-bolder"> <i class="fa fa-history"
+                    aria-hidden="true"></i> MY TRANSACTIONS</h2>
+        </div>
+        <!-- Table   -->
+        <div class="col-12">
+            <table class="table ">
+                <thead class="bg-primary text-white">
+                    <tr>
+                        <th scope="col">Date</th>
+                        <th scope="col">Amount(NGN)</th>
+                        <th scope="col">Type</th>
+                        <th scope="col">Code</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td scope="row">12/11/2023</td>
+                        <td>60,999</td>
+                        <td>Transfer</td>
+                        <td>DR</td>
+                    </tr>
+                    <tr>
+                        <td scope="row">12/11/2023</td>
+                        <td>60,999</td>
+                        <td>Transfer</td>
+                        <td>DR</td>
+                    </tr>
+                    <tr>
+                        <td scope="row">12/11/2023</td>
+                        <td>60,999</td>
+                        <td>Transfer</td>
+                        <td>DR</td>
+                    </tr>
+                    <tr>
+                        <td scope="row">12/11/2023</td>
+                        <td>60,999</td>
+                        <td>Transfer</td>
+                        <td>DR</td>
+                    </tr>
+                    <tr>
+                        <td scope="row">12/11/2023</td>
+                        <td>60,999</td>
+                        <td>Transfer</td>
+                        <td>DR</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- Table  END -->
+
+        <div class="col-12">
+            <div class="d-flex justify-content-end align-items-center">
+                <a name=""
+                    id=""
+                    class="btn btn-primary"
+                    href="#"
+                    role="button"> <i class="fa fa-eye"
+                        aria-hidden="true"></i> View All Transactions</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+{% endblock contents %}
