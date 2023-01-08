@@ -8,5 +8,6 @@ psycopg2-binary==2.9.3
 python-decouple==3.4
 pytz==2021.1
 whitenoise==6.2.0
+jango-auto-prefetch==1.4.0
 
 
